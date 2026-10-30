@@ -36,30 +36,31 @@
         header {
             background: linear-gradient(180deg, rgba(18, 19, 24, 0.98), rgba(10, 10, 12, 0.95));
             border-bottom: 2px solid var(--accent-orange);
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 20px var(--accent-orange-glow);
+            gap: 10px;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
             cursor: pointer;
         }
 
         .logo-icon {
-            width: 70px;
-            height: 60px;
+            width: 50px;
+            height: 45px;
             filter: drop-shadow(0 0 6px var(--accent-orange-glow));
         }
 
         .brand-title {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 900;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: var(--text-main);
             text-transform: uppercase;
         }
@@ -72,14 +73,16 @@
             background: var(--accent-orange);
             color: #ffffff;
             border: none;
-            padding: 0.7rem 1.4rem;
+            padding: 0.6rem 1.1rem;
             border-radius: 4px;
             cursor: pointer;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             transition: all 0.2s ease;
             box-shadow: 0 0 12px var(--accent-orange-glow);
+            font-size: 0.85rem;
+            white-space: nowrap;
         }
 
         .btn-orange:hover {
@@ -110,21 +113,21 @@
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1.2rem;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
         }
 
         .stat-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 1.2rem;
+            padding: 0.8rem 0.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -142,14 +145,14 @@
 
         .stat-card h3 {
             color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.7rem;
+            margin-bottom: 0.3rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .stat-card p {
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             font-weight: 900;
             color: var(--text-main);
         }
@@ -157,30 +160,30 @@
         /* Controles de Búsqueda y Orden */
         .controls-container {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
             flex-wrap: wrap;
         }
 
         .search-input {
-            flex: 1;
-            min-width: 280px;
-            padding: 0.8rem 1rem;
+            flex: 1 1 200px;
+            padding: 0.7rem 0.9rem;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             color: var(--text-main);
             border-radius: 6px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
 
         .sort-select {
-            padding: 0.8rem 1rem;
+            flex: 1 1 140px;
+            padding: 0.7rem 0.8rem;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             color: var(--text-main);
             border-radius: 6px;
-            font-size: 1rem;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
@@ -191,33 +194,41 @@
             box-shadow: 0 0 10px var(--accent-orange-glow);
         }
 
+        /* Tabs mejoradas para móvil */
         .tabs {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .tabs::-webkit-scrollbar {
+            display: none;
         }
 
         .tab-btn {
             background: none;
             border: none;
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 700;
             cursor: pointer;
-            padding: 0.6rem 1.2rem;
+            padding: 0.5rem 0.9rem;
             border-radius: 4px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             transition: 0.2s;
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .tab-btn.active, .tab-btn:hover {
             color: var(--accent-orange);
-            background: rgba(255, 59, 0, 0.08);
+            background: rgba(255, 59, 0, 0.12);
         }
 
         .tab-content {
@@ -230,8 +241,8 @@
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.2rem;
         }
 
         .game-card {
@@ -253,13 +264,13 @@
 
         .game-img {
             width: 100%;
-            height: 160px;
+            height: 180px;
             object-fit: cover;
             background-color: #1a1b22;
         }
 
         .game-info {
-            padding: 1rem;
+            padding: 0.9rem;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -267,16 +278,16 @@
         }
 
         .game-title {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 800;
             margin-bottom: 0.4rem;
             color: var(--text-main);
         }
 
         .game-meta {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -288,17 +299,17 @@
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             border: 1px solid rgba(255, 59, 0, 0.3);
         }
 
         .game-notes {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #d1d2dc;
             background: rgba(0,0,0,0.4);
-            padding: 0.6rem;
+            padding: 0.5rem;
             border-radius: 4px;
-            margin-top: 0.5rem;
+            margin-top: 0.4rem;
             border-left: 3px solid var(--accent-orange);
             white-space: nowrap;
             overflow: hidden;
@@ -308,7 +319,7 @@
         .card-actions {
             display: flex;
             justify-content: flex-end;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             gap: 0.5rem;
         }
 
@@ -318,7 +329,7 @@
             color: var(--text-muted);
             cursor: pointer;
             padding: 0.3rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: color 0.2s;
         }
 
@@ -330,16 +341,16 @@
         .podium-container {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.5rem;
             max-width: 1000px;
             margin: 0 auto;
-            padding: 1rem 0;
+            padding: 0.5rem 0;
         }
 
         .podium-top3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 1rem;
             align-items: flex-end;
         }
 
@@ -354,18 +365,12 @@
             cursor: pointer;
         }
 
-        .podium-item:hover {
-            transform: translateY(-6px);
-        }
-
-        /* Posicionamiento y Estilos del Podio */
         .podium-1 {
             border-color: var(--gold);
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
             order: 2;
-            transform: translateY(-20px);
+            transform: translateY(-12px);
         }
-        .podium-1:hover { transform: translateY(-26px); }
 
         .podium-2 {
             border-color: var(--silver);
@@ -381,12 +386,12 @@
 
         .podium-badge {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            padding: 0.3rem 0.7rem;
+            top: 8px;
+            left: 8px;
+            padding: 0.2rem 0.6rem;
             border-radius: 20px;
             font-weight: 900;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             z-index: 5;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
@@ -398,28 +403,28 @@
 
         .podium-img {
             width: 100%;
-            height: 180px;
+            height: 160px;
             object-fit: cover;
             background-color: #1a1b22;
         }
 
-        .podium-1 .podium-img { height: 210px; }
+        .podium-1 .podium-img { height: 190px; }
 
         .podium-info {
-            padding: 1.2rem;
+            padding: 0.8rem;
         }
 
         .podium-title {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: 900;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
             color: var(--text-main);
         }
 
         .podium-rest-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .podium-rest-item {
@@ -434,19 +439,14 @@
             position: relative;
         }
 
-        .podium-rest-item:hover {
-            border-color: var(--accent-orange);
-            transform: translateY(-3px);
-        }
-
         .podium-rest-img {
-            width: 110px;
-            height: 100px;
+            width: 90px;
+            height: 85px;
             object-fit: cover;
         }
 
         .podium-rest-info {
-            padding: 1rem;
+            padding: 0.8rem;
             flex: 1;
         }
 
@@ -458,11 +458,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.88);
             justify-content: center;
             align-items: center;
             z-index: 1000;
             backdrop-filter: blur(5px);
+            padding: 1rem;
         }
 
         .modal.open {
@@ -472,7 +473,7 @@
         .modal-content {
             background-color: var(--card-bg);
             border: 1px solid var(--accent-orange);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 8px;
             width: 100%;
             max-width: 500px;
@@ -482,18 +483,19 @@
         }
 
         .modal-content h2 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             color: var(--accent-orange);
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 1.2rem;
         }
 
-        /* Modal Detalle del Juego */
+        /* Modal Detalle */
         .detail-modal-content {
             background-color: var(--card-bg);
             border: 1px solid var(--accent-orange);
             border-radius: 8px;
-            width: 90%;
+            width: 100%;
             max-width: 850px;
             box-shadow: 0 0 35px var(--accent-orange-glow);
             max-height: 90vh;
@@ -506,7 +508,7 @@
         .detail-header {
             position: relative;
             width: 100%;
-            max-height: 420px;
+            max-height: 350px;
             overflow: hidden;
             background: #000;
         }
@@ -514,18 +516,18 @@
         .detail-full-img {
             width: 100%;
             height: 100%;
-            max-height: 420px;
+            max-height: 350px;
             object-fit: contain;
             display: block;
             margin: 0 auto;
         }
 
         .detail-body {
-            padding: 2rem;
+            padding: 1.2rem;
         }
 
         .detail-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 900;
             color: var(--text-main);
             margin-bottom: 0.5rem;
@@ -534,18 +536,17 @@
 
         .detail-badges {
             display: flex;
-            gap: 0.8rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .badge {
-            padding: 0.4rem 0.8rem;
+            padding: 0.3rem 0.6rem;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .badge-orange {
@@ -562,12 +563,13 @@
 
         .detail-notes-box {
             background: rgba(0, 0, 0, 0.5);
-            border-left: 4px solid var(--accent-orange);
-            padding: 1.2rem;
+            border-left: 3px solid var(--accent-orange);
+            padding: 1rem;
             border-radius: 4px;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             color: #e0e1e9;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.5;
             white-space: pre-wrap;
         }
 
@@ -575,40 +577,34 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             padding-top: 1rem;
             border-top: 1px solid var(--border-color);
         }
 
         .close-btn-top {
             position: absolute;
-            top: 15px;
-            right: 20px;
+            top: 12px;
+            right: 15px;
             background: rgba(0,0,0,0.7);
             border: 1px solid var(--border-color);
             color: var(--text-main);
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             cursor: pointer;
             z-index: 10;
-            transition: 0.2s;
-        }
-
-        .close-btn-top:hover {
-            background: var(--accent-orange);
-            color: #fff;
         }
 
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 0.9rem;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
-            margin-bottom: 0.4rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
             color: var(--text-muted);
             text-transform: uppercase;
             font-weight: 700;
@@ -616,39 +612,98 @@
 
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 0.7rem;
+            padding: 0.6rem;
             background-color: var(--bg-dark);
             border: 1px solid var(--border-color);
             color: var(--text-main);
             border-radius: 4px;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-orange);
+            font-size: 0.9rem;
         }
 
         .modal-buttons {
             display: flex;
             justify-content: flex-end;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
         }
 
         .backup-section {
-            margin-top: 3rem;
+            margin-top: 2rem;
             border-top: 1px solid var(--border-color);
-            padding-top: 1.5rem;
+            padding-top: 1.2rem;
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 768px) {
-            .podium-top3 { grid-template-columns: 1fr; }
-            .podium-1 { transform: none; order: 1; }
+        .backup-section button {
+            flex: 1;
+        }
+
+        /* Ajustes específicos para móviles */
+        @media (max-width: 600px) {
+            header {
+                padding: 0.8rem 1rem;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 35px;
+            }
+
+            .brand-title {
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+            }
+
+            .btn-orange {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            main {
+                padding: 0.9rem;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .game-img {
+                height: 200px;
+            }
+
+            .podium-top3 { 
+                grid-template-columns: 1fr; 
+            }
+            
+            .podium-1 { 
+                transform: none; 
+                order: 1; 
+            }
             .podium-2 { order: 2; }
             .podium-3 { order: 3; }
-            .podium-rest-grid { grid-template-columns: 1fr; }
+
+            .podium-rest-grid { 
+                grid-template-columns: 1fr; 
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.4rem;
+            }
+
+            .stat-card {
+                padding: 0.6rem 0.3rem;
+            }
+
+            .stat-card h3 {
+                font-size: 0.6rem;
+            }
+
+            .stat-card p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -667,18 +722,18 @@
             <div class="brand-title">CM23 <span>VAULT</span></div>
         </div>
         <div>
-            <button class="btn-orange" onclick="openModal()">+ Añadir Juego</button>
+            <button class="btn-orange" onclick="openModal()">+ Añadir</button>
         </div>
     </header>
 
     <main>
         <div class="stats-grid">
             <div class="stat-card">
-                <h3>Juegos Completados</h3>
+                <h3>Completados</h3>
                 <p id="statCompleted">0</p>
             </div>
             <div class="stat-card">
-                <h3>En la recámara (Backlog)</h3>
+                <h3>Pendientes</h3>
                 <p id="statBacklog">0</p>
             </div>
             <div class="stat-card">
@@ -689,21 +744,21 @@
 
         <!-- Controles de Búsqueda y Ordenamiento -->
         <div class="controls-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar juego por título o plataforma..." oninput="render()">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar juego..." oninput="render()">
             <select id="sortSelect" class="sort-select" onchange="render()">
-                <option value="rating-desc">★ Mayor Calificación</option>
-                <option value="rating-asc">★ Menor Calificación</option>
-                <option value="title-asc">🔤 Alfabético (A - Z)</option>
-                <option value="title-desc">🔤 Alfabético (Z - A)</option>
-                <option value="year-desc">📅 Año / Más recientes</option>
+                <option value="rating-desc">★ Mayor Nota</option>
+                <option value="rating-asc">★ Menor Nota</option>
+                <option value="title-asc">🔤 A - Z</option>
+                <option value="title-desc">🔤 Z - A</option>
+                <option value="year-desc">📅 Más recientes</option>
             </select>
         </div>
 
-        <!-- Pestañas actualizadas con el Top 5 -->
+        <!-- Pestañas navegables con scroll suave en móvil -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('completed')">Completados por Año</button>
-            <button class="tab-btn" onclick="switchTab('backlog')">Pendientes / Backlog</button>
-            <button class="tab-btn" onclick="switchTab('top5')">🏆 Top 5 Obras Maestras</button>
+            <button class="tab-btn active" onclick="switchTab('completed')">Completados</button>
+            <button class="tab-btn" onclick="switchTab('backlog')">Pendientes</button>
+            <button class="tab-btn" onclick="switchTab('top5')">🏆 Top 5</button>
         </div>
 
         <div id="tab-completed" class="tab-content active">
@@ -760,7 +815,7 @@
                 </div>
                 <div class="form-group">
                     <label>Notas / Reseña personal</label>
-                    <textarea id="notes" rows="4" placeholder="Trucos, impresiones, mejores momentos..."></textarea>
+                    <textarea id="notes" rows="4" placeholder="Trucos, impresiones..."></textarea>
                 </div>
                 <div class="modal-buttons">
                     <button type="button" class="btn-outline" onclick="closeModal()">Cancelar</button>
@@ -786,11 +841,11 @@
                     <span id="detailRating" class="badge badge-orange">★ 10/10</span>
                 </div>
 
-                <h3 style="color: var(--text-muted); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Mis Notas & Reseña</h3>
+                <h3 style="color: var(--text-muted); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Mis Notas & Reseña</h3>
                 <div id="detailNotes" class="detail-notes-box">Sin notas registradas para este juego.</div>
 
                 <div class="detail-actions">
-                    <button id="btnEditFromDetail" class="btn-outline" onclick="">✏️ Editar Ficha</button>
+                    <button id="btnEditFromDetail" class="btn-outline" onclick="">✏️ Editar</button>
                     <button class="btn-orange" onclick="closeDetailModal()">Cerrar</button>
                 </div>
             </div>
@@ -967,8 +1022,8 @@
                 completedContainer.innerHTML = years.map(year => {
                     const yearGames = completedGames.filter(g => (g.year || 'Sin año') == year);
                     return `
-                        <div style="margin-bottom: 2.5rem;">
-                            <h3 style="color: var(--accent-orange); margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 1px;">📅 Año ${year}</h3>
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--accent-orange); margin-bottom: 0.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 1px; font-size: 1.1rem;">📅 Año ${year}</h3>
                             <div class="games-grid">
                                 ${yearGames.map(g => createCardHTML(g)).join('')}
                             </div>
@@ -983,7 +1038,6 @@
 
         function renderTop5Podium() {
             const top5Container = document.getElementById('top5Container');
-            // Obtener todos los completados ordenados por nota de mayor a menor
             const completedSorted = games
                 .filter(g => g.status === 'Completado')
                 .sort((a, b) => parseFloat(b.rating || 0) - parseFloat(a.rating || 0))
@@ -1008,7 +1062,7 @@
                             <img src="${img}" class="podium-img" alt="${g.title}">
                             <div class="podium-info">
                                 <div class="podium-title">${g.title}</div>
-                                <div class="game-meta" style="justify-content: center; gap: 1rem; margin-bottom: 0;">
+                                <div class="game-meta" style="justify-content: center; gap: 0.8rem; margin-bottom: 0;">
                                     <span>${g.platform || 'N/A'}</span>
                                     <span class="game-rating">★ ${g.rating}/10</span>
                                 </div>
@@ -1018,10 +1072,10 @@
                 } else {
                     restHTML += `
                         <div class="podium-rest-item" onclick="openDetailModal('${g.id}')">
-                            <span class="podium-badge badge-rest" style="top: 8px; left: 8px; font-size: 0.75rem; padding: 0.2rem 0.5rem;">${pos}º</span>
+                            <span class="podium-badge badge-rest" style="top: 6px; left: 6px; font-size: 0.7rem; padding: 0.2rem 0.4rem;">${pos}º</span>
                             <img src="${img}" class="podium-rest-img" alt="${g.title}">
                             <div class="podium-rest-info">
-                                <div class="podium-title" style="font-size: 1rem;">${g.title}</div>
+                                <div class="podium-title">${g.title}</div>
                                 <div class="game-meta" style="margin-bottom: 0;">
                                     <span>${g.platform || 'N/A'}</span>
                                     <span class="game-rating">★ ${g.rating}/10</span>
@@ -1034,7 +1088,7 @@
 
             top5Container.innerHTML = `
                 <div class="podium-container">
-                    <h2 style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">👑 Salón de la Fama - Top 5 Obras Maestras</h2>
+                    <h2 style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.8rem; font-size: 1.2rem;">👑 Salón de la Fama - Top 5</h2>
                     <div class="podium-top3">
                         ${top3HTML}
                     </div>
